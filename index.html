@@ -117,6 +117,16 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
 .hl-item:hover{color:var(--gold)}
 .hl-item::before{content:'';position:absolute;left:0;top:50%;width:10px;height:1px;background:var(--gold-dim);transition:width 0.4s var(--ease),background 0.4s}
 .hl-item:hover::before{width:15px;background:var(--gold)}
+/* ═══ GALLERY CINEMA — 1 big + 2 small ═══ */
+.gallery-cinema{display:grid;grid-template-columns:3fr 2fr;gap:3px;min-height:500px}
+@media(max-width:768px){.gallery-cinema{grid-template-columns:1fr;min-height:auto}}
+.gallery-hero{position:relative;overflow:hidden;min-height:500px}
+.gallery-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.65) saturate(0.8);transition:filter 1s var(--ease)}
+.gallery-hero:hover img{filter:brightness(0.8) saturate(0.9)}
+.gallery-side{display:flex;flex-direction:column;gap:3px}
+.gallery-side-img{position:relative;overflow:hidden;flex:1;min-height:248px}
+.gallery-side-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6) saturate(0.75);transition:filter 1s var(--ease)}
+.gallery-side-img:hover img{filter:brightness(0.8) saturate(0.9)}
 .gallery-full{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 @media(max-width:640px){.gallery-full{grid-template-columns:1fr}}
 .gallery-full img{width:100%;height:340px;object-fit:cover;filter:brightness(0.6) saturate(0.75);transition:filter 1s var(--ease)}
@@ -252,9 +262,12 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
       <p class="invite-body reveal reveal-up" data-i18n="h_inv_p"></p>
     </div>
   </div>
-  <div class="gallery-full">
-    <img data-img="haiban3" src="images/haiban3.jpg" alt="" class="reveal reveal-left">
-    <img data-img="haiban" src="images/haiban.jpg" alt="" class="reveal reveal-right" style="object-position:center 40%">
+  <div class="gallery-cinema reveal reveal-up">
+    <div class="gallery-hero"><img data-img="haiban3" src="images/haiban3.jpg" alt=""></div>
+    <div class="gallery-side">
+      <div class="gallery-side-img"><img data-img="haiban4" src="images/haiban4.jpg" alt=""></div>
+      <div class="gallery-side-img"><img data-img="haiban" src="images/haiban.jpg" alt="" style="object-position:center 40%"></div>
+    </div>
   </div>
   <div class="highlights-section">
     <div class="highlights-title reveal reveal-up" data-i18n="key_adv"></div>
