@@ -56,7 +56,7 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px clamp(24px,8vw,120px) 60px;overflow:hidden;background:var(--navy)}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(197,160,89,0.04) 0%,transparent 65%);pointer-events:none}
 .hero::after{content:'';position:absolute;inset:0;opacity:0.025;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero-logo{height:180px;width:auto;object-fit:contain;margin-bottom:40px;opacity:0;animation:fadeIn 1.2s 0.3s var(--ease) forwards}
+.hero-logo{width:clamp(280px,42vw,520px);height:auto;object-fit:contain;margin-bottom:40px;opacity:0;animation:fadeIn 1.2s 0.3s var(--ease) forwards}
 .hero-line{width:1px;height:50px;background:linear-gradient(180deg,transparent,var(--gold-dim),transparent);margin-bottom:36px;opacity:0;animation:fadeIn 1.5s 0.5s var(--ease) forwards}
 .hero-overline{font-family:var(--sans);font-size:0.72rem;font-weight:200;letter-spacing:0.8em;color:var(--gold);margin-bottom:32px;opacity:0;transform:translateY(15px);animation:revealUp 1.2s 0.7s var(--ease) forwards}
 .hero-title{font-family:var(--serif);font-size:clamp(2.6rem,7vw,5.4rem);font-weight:200;line-height:1.55;letter-spacing:0.18em;color:var(--white);margin-bottom:24px;opacity:0;transform:translateY(25px);animation:revealUp 1.4s 0.9s var(--ease) forwards}
@@ -477,6 +477,9 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
   <div class="footer-copy" data-i18n="footer"></div>
 </footer>
 
+<script src="script.js"></script>
+<script>
+window.LANG_INLINE =
 <script src="script.js"></script>
 <script>document.addEventListener('DOMContentLoaded', function() { initPage(); });</script>
 </body>
