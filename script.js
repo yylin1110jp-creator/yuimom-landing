@@ -268,10 +268,10 @@
     var grid = document.getElementById('heroGrid');
     if (grid) {
       var cards = [
-        { section: 'haiban',    num: '623', label: '01', img: 'images/haiban.jpg' },
-        { section: 'zhongshan', num: '813', label: '02', img: 'images/zhongshan.jpg' },
-        { section: 'changzhuo', num: '477', label: '03', img: 'images/changzhuo.jpg' },
-        { section: 'baotai',    num: '162', label: '04', img: 'images/baotai.jpg' }
+        { section: 'haiban',    num: '2,059', label: '01', img: 'images/haiban.jpg' },
+        { section: 'zhongshan', num: '2,688', label: '02', img: 'images/zhongshan.jpg' },
+        { section: 'changzhuo', num: '1,577', label: '03', img: 'images/changzhuo.jpg' },
+        { section: 'baotai',    num: '536', label: '04', img: 'images/baotai.jpg' }
       ];
       cards.forEach(function (c) {
         var card = document.createElement('div');
