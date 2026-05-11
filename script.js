@@ -93,7 +93,7 @@
     document.querySelectorAll('.hero-card .card-title').forEach(function (el, idx) {
       if (d[titleKeys[idx]]) el.textContent = d[titleKeys[idx]];
     });
-    document.querySelectorAll('.hero-card .card-unit').forEach(function (el, idx) {
+    document.querySelectorAll('.hero-card .card-unit-inline').forEach(function (el, idx) {
       if (d[unitKeys[idx]]) el.textContent = d[unitKeys[idx]];
     });
 
@@ -281,8 +281,7 @@
           '<img src="' + c.img + '" alt="">' +
           '<div class="hero-card-content">' +
             '<div class="card-num">' + c.label + '</div>' +
-            '<div class="card-stat">' + c.num + '</div>' +
-            '<div class="card-unit"></div>' +
+            '<div class="card-stat">' + c.num + '<span class="card-unit-inline"></span></div>' +
             '<div class="card-title"></div>' +
           '</div>';
         grid.appendChild(card);

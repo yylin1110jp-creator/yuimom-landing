@@ -102,7 +102,7 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
 .hero-card-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 24px;background:linear-gradient(180deg,transparent 45%,rgba(7,13,61,0.55) 100%)}
 .hero-card .card-num{font-family:var(--eng);font-size:0.75rem;font-weight:300;letter-spacing:0.5em;color:var(--gold-dim);margin-bottom:auto}
 .hero-card .card-stat{font-family:var(--eng);font-size:2.6rem;font-weight:300;color:var(--gold);letter-spacing:0.03em;line-height:1;margin-bottom:4px}
-.hero-card .card-unit{font-family:var(--sans);font-size:0.7rem;font-weight:200;letter-spacing:0.35em;color:var(--silver)}
+.hero-card .card-unit-inline{font-family:var(--sans);font-size:0.55rem;font-weight:200;letter-spacing:0.2em;color:var(--silver);margin-left:6px}
 .hero-card .card-title{font-family:var(--serif);font-size:1.15rem;font-weight:400;letter-spacing:0.15em;color:var(--white);margin-top:6px;transition:color 0.5s}
 .hero-card:hover .card-title{color:var(--gold)}
 .scroll-ind{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fadeIn 1s 2.2s var(--ease) forwards}
@@ -121,7 +121,7 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
 .prop-tagline{font-family:var(--sans);font-size:0.92rem;font-weight:200;letter-spacing:0.15em;color:var(--off-white);max-width:480px;text-shadow:0 1px 10px rgba(7,13,61,0.4)}
 .prop-hero-stat{position:absolute;right:clamp(30px,8vw,120px);bottom:clamp(60px,10vh,120px);text-align:right}
 .prop-hero-stat .big-num{font-family:var(--eng);font-size:clamp(5rem,12vw,10rem);font-weight:300;color:rgba(197,160,89,0.45);line-height:0.85;letter-spacing:-0.02em;text-shadow:0 2px 30px rgba(7,13,61,0.6)}
-.prop-hero-stat .big-unit{font-family:var(--sans);font-size:0.85rem;font-weight:300;letter-spacing:0.4em;color:rgba(197,160,89,0.5);margin-top:10px}
+.prop-hero-stat .big-unit{font-family:var(--sans);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:200;letter-spacing:0.1em;color:rgba(197,160,89,0.45);margin-left:8px}
 @media(max-width:768px){.prop-hero-stat{display:none}}
 .prop-body{background:var(--navy)}
 
@@ -276,7 +276,7 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
     <h2 class="prop-title" data-i18n="h_title"></h2>
     <p class="prop-tagline" data-i18n="h_tagline"></p>
   </div>
-  <div class="prop-hero-stat"><div class="big-num">623</div><div class="big-unit" data-i18n="h_big_unit"></div></div>
+  <div class="prop-hero-stat"><div class="big-num">623<span class="big-unit" data-i18n="h_big_unit"></span></div></div>
 </div>
 <div class="prop-body">
   <div class="stats-strip">
@@ -331,7 +331,7 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
     <h2 class="prop-title" data-i18n="z_title"></h2>
     <p class="prop-tagline" data-i18n="z_tagline"></p>
   </div>
-  <div class="prop-hero-stat"><div class="big-num">813</div><div class="big-unit" data-i18n="z_big_unit"></div></div>
+  <div class="prop-hero-stat"><div class="big-num">813<span class="big-unit" data-i18n="z_big_unit"></span></div></div>
 </div>
 <div class="prop-body">
   <div class="stats-strip">
@@ -386,7 +386,7 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
     <h2 class="prop-title" data-i18n="c_title"></h2>
     <p class="prop-tagline" data-i18n="c_tagline"></p>
   </div>
-  <div class="prop-hero-stat"><div class="big-num">477</div><div class="big-unit" data-i18n="c_big_unit"></div></div>
+  <div class="prop-hero-stat"><div class="big-num">477<span class="big-unit" data-i18n="c_big_unit"></span></div></div>
 </div>
 <div class="prop-body">
   <div class="stats-strip">
@@ -473,7 +473,7 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
     <h2 class="prop-title" data-i18n="b_title"></h2>
     <p class="prop-tagline" data-i18n="b_tagline"></p>
   </div>
-  <div class="prop-hero-stat"><div class="big-num">162</div><div class="big-unit" data-i18n="b_big_unit"></div></div>
+  <div class="prop-hero-stat"><div class="big-num">162<span class="big-unit" data-i18n="b_big_unit"></span></div></div>
 </div>
 <div class="prop-body">
   <div class="stats-strip">
