@@ -136,6 +136,32 @@
     var delay = (prev && curSection !== id) ? 350 : 0;
     curSection = id;
 
+    // GA tracking — send virtual page view for each section
+    if (typeof gtag === 'function') {
+      var pageTitles = {
+        zh: {
+          'home': '首頁 | 御盟精選物業',
+          'haiban': '海邊大面寬店面 | 御盟精選物業',
+          'zhongshan': '中山地下大型商場 | 御盟精選物業',
+          'changzhuo': '長茁獨棟商辦 | 御盟精選物業',
+          'baotai': '保泰黃金三角窗 | 御盟精選物業'
+        },
+        en: {
+          'home': 'Home | YUIMOM Properties',
+          'haiban': 'Haibian Wide-Front | YUIMOM Properties',
+          'zhongshan': 'Zhongshan Underground | YUIMOM Properties',
+          'changzhuo': 'Evergreen Standalone | YUIMOM Properties',
+          'baotai': 'Baotai Golden Corner | YUIMOM Properties'
+        }
+      };
+      var titles = pageTitles[curLang] || pageTitles['zh'];
+      gtag('event', 'page_view', {
+        page_title: titles[id] || id,
+        page_location: window.location.href,
+        page_path: '/#' + id
+      });
+    }
+
     setTimeout(function () {
       var el = document.getElementById('sec-' + id);
       if (el) {
