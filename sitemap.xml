@@ -1,33 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://yuimom.site/</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/"/>
   </url>
+
   <url>
-    <loc>https://yuimom.site/#haiban</loc>
+    <loc>https://yuimom.site/haiban/</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/haiban/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/haiban/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/haiban/"/>
   </url>
+
   <url>
-    <loc>https://yuimom.site/#zhongshan</loc>
+    <loc>https://yuimom.site/zhongshan/</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/zhongshan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/zhongshan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/zhongshan/"/>
   </url>
+
   <url>
-    <loc>https://yuimom.site/#changzhuo</loc>
+    <loc>https://yuimom.site/changzhuo/</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/changzhuo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/changzhuo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/changzhuo/"/>
   </url>
+
   <url>
-    <loc>https://yuimom.site/#baotai</loc>
+    <loc>https://yuimom.site/baotai/</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/baotai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/baotai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/baotai/"/>
   </url>
+
+  <url>
+    <loc>https://yuimom.site/en/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/"/>
+  </url>
+
+  <url>
+    <loc>https://yuimom.site/en/haiban/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/haiban/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/haiban/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/haiban/"/>
+  </url>
+
+  <url>
+    <loc>https://yuimom.site/en/zhongshan/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/zhongshan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/zhongshan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/zhongshan/"/>
+  </url>
+
+  <url>
+    <loc>https://yuimom.site/en/changzhuo/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/changzhuo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/changzhuo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/changzhuo/"/>
+  </url>
+
+  <url>
+    <loc>https://yuimom.site/en/baotai/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://yuimom.site/baotai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuimom.site/en/baotai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuimom.site/baotai/"/>
+  </url>
+
 </urlset>
