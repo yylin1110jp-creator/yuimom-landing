@@ -16,6 +16,8 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '986780437608046');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Zhongshan Landmark Retail Complex', content_ids: ['zhongshan'], content_type: 'product', content_category: 'Commercial Real Estate'});
+
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=986780437608046&ev=PageView&noscript=1"
@@ -78,6 +80,59 @@ src="https://www.facebook.com/tr?id=986780437608046&ev=PageView&noscript=1"
   {"@type":"Question","name":"What landmarks and major developments are nearby?","acceptedAnswer":{"@type":"Answer","text":"Adjacent to FE21 Mega Department Store (Kaohsiung's 10-time price leader), Shin Kong Mitsukoshi Sanduo, MRT Sanduo Shopping District Station (2-min walk), Dream Mall, National Kaohsiung Center for the Arts (Weiwuying), Kaohsiung Public Library Main Branch, Kaohsiung Music Center, Kaohsiung Exhibition Center, MLD Reading Plaza."}}
 ]}
 </script>
+
+<!-- Meta Pixel — User Interaction Events -->
+<script>
+(function(){
+  if(typeof fbq!=='function')return;
+  function fire(name,params){try{fbq('track',name,params||{});}catch(e){}}
+  // 等 DOM 載入完
+  document.addEventListener('DOMContentLoaded',function(){
+    // 電話按鈕 → Contact + Lead
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+      el.addEventListener('click',function(){
+        fire('Contact',{content_name:'Phone Click',content_category:'Phone'});
+        fire('Lead',{content_name:'Phone Click',content_category:'Phone'});
+      });
+    });
+    // LINE 連結 → Contact + Lead
+    document.querySelectorAll('a[href*="lin.ee/"]').forEach(function(el){
+      el.addEventListener('click',function(){
+        fire('Contact',{content_name:'LINE Click',content_category:'LINE'});
+        fire('Lead',{content_name:'LINE Click',content_category:'LINE'});
+      });
+    });
+    // 預約鑑賞 cta-section → Schedule（看到該區塊時觸發一次）
+    var ctaSec=document.querySelector('.cta-section');
+    if(ctaSec && 'IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            fire('Schedule',{content_name:'Private Viewing CTA'});
+            obs.unobserve(e.target);
+          }
+        });
+      },{threshold:0.5});
+      obs.observe(ctaSec);
+    }
+    // 地段區塊 → FindLocation（看到地圖/位置區塊時觸發一次）
+    var locSec=document.querySelector('.location-section, .map-section, [id*="location"], [id*="map"]');
+    if(locSec && 'IntersectionObserver' in window){
+      var obsL=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            fire('FindLocation',{content_name:'Location Section'});
+            obsL.unobserve(e.target);
+          }
+        });
+      },{threshold:0.4});
+      obsL.observe(locSec);
+    }
+  });
+})();
+</script>
+<!-- End Meta Pixel User Interaction Events -->
+
 </head>
 <body>
 

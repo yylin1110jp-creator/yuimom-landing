@@ -16,6 +16,8 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '986780437608046');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Baotai Residence', content_ids: ['baotai'], content_type: 'product', content_category: 'Commercial Real Estate'});
+
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=986780437608046&ev=PageView&noscript=1"
@@ -78,6 +80,59 @@ src="https://www.facebook.com/tr?id=986780437608046&ev=PageView&noscript=1"
   {"@type":"Question","name":"Why is it suitable for dental clinics?","acceptedAnswer":{"@type":"Answer","text":"Twin frontages of 23.38m + 18.43m provide a medical clinic the advantage of \"bright visibility, easy identification\"; setback arcade and double-row camphor trees create a tidy, bright green walkway that helps clients feel at ease; accessible space is fully planned, friendly to disabled visitors, shoppers, and parents with strollers; B1F dedicated parking enables convenient client visits; Fengshan's 356,500 population provides a stable client base."}}
 ]}
 </script>
+
+<!-- Meta Pixel — User Interaction Events -->
+<script>
+(function(){
+  if(typeof fbq!=='function')return;
+  function fire(name,params){try{fbq('track',name,params||{});}catch(e){}}
+  // 等 DOM 載入完
+  document.addEventListener('DOMContentLoaded',function(){
+    // 電話按鈕 → Contact + Lead
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+      el.addEventListener('click',function(){
+        fire('Contact',{content_name:'Phone Click',content_category:'Phone'});
+        fire('Lead',{content_name:'Phone Click',content_category:'Phone'});
+      });
+    });
+    // LINE 連結 → Contact + Lead
+    document.querySelectorAll('a[href*="lin.ee/"]').forEach(function(el){
+      el.addEventListener('click',function(){
+        fire('Contact',{content_name:'LINE Click',content_category:'LINE'});
+        fire('Lead',{content_name:'LINE Click',content_category:'LINE'});
+      });
+    });
+    // 預約鑑賞 cta-section → Schedule（看到該區塊時觸發一次）
+    var ctaSec=document.querySelector('.cta-section');
+    if(ctaSec && 'IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            fire('Schedule',{content_name:'Private Viewing CTA'});
+            obs.unobserve(e.target);
+          }
+        });
+      },{threshold:0.5});
+      obs.observe(ctaSec);
+    }
+    // 地段區塊 → FindLocation（看到地圖/位置區塊時觸發一次）
+    var locSec=document.querySelector('.location-section, .map-section, [id*="location"], [id*="map"]');
+    if(locSec && 'IntersectionObserver' in window){
+      var obsL=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            fire('FindLocation',{content_name:'Location Section'});
+            obsL.unobserve(e.target);
+          }
+        });
+      },{threshold:0.4});
+      obsL.observe(locSec);
+    }
+  });
+})();
+</script>
+<!-- End Meta Pixel User Interaction Events -->
+
 </head>
 <body>
 
