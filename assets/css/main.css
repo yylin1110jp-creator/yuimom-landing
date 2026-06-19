@@ -328,3 +328,39 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
   .walkthrough-body{text-align:left;max-width:100%}
   .walkthrough-cta{text-align:center}
 }
+
+/* === 影片區巨大水印字 (clamp-fit, 不滿出 section) === */
+.walkthrough-section,.video-cinema{position:relative;overflow:hidden}
+.walkthrough-watermark,.video-cinema-watermark{
+  position:absolute;
+  top:50%;
+  right:-2vw;
+  transform:translateY(-50%);
+  font-family:var(--serif);
+  font-size:clamp(7rem,18vw,22rem);
+  font-weight:200;
+  letter-spacing:0.04em;
+  color:var(--gold);
+  opacity:0.045;
+  pointer-events:none;
+  white-space:nowrap;
+  line-height:1;
+  z-index:0;
+  user-select:none;
+  text-transform:uppercase;
+}
+/* 確保影片區內容仍在水印上方 */
+.walkthrough-inner,.video-cinema-inner{position:relative;z-index:1}
+
+/* 手機版水印縮小、置中下移、避免擋影片 */
+@media (max-width:768px){
+  .walkthrough-watermark,.video-cinema-watermark{
+    font-size:clamp(4rem,16vw,8rem);
+    right:auto;
+    left:50%;
+    top:auto;
+    bottom:-1rem;
+    transform:translateX(-50%);
+    opacity:0.035;
+  }
+}
