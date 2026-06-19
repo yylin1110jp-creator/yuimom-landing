@@ -305,3 +305,26 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
   .video-cinema{padding:60px 0}
   .video-frame::before,.video-frame::after{width:24px;height:24px}
 }
+
+/* === 現場鑑賞 影片區 (baotai walkthrough — 9:16 vertical) === */
+.walkthrough-section{padding:90px clamp(28px,5vw,90px);background:linear-gradient(180deg,var(--navy-light) 0%,var(--navy) 100%);position:relative;overflow:hidden}
+.walkthrough-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(197,160,89,0.05) 0%,transparent 65%);pointer-events:none}
+.walkthrough-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:clamp(32px,5vw,60px);align-items:center;position:relative;z-index:1}
+.walkthrough-video{width:clamp(220px,28vw,320px);aspect-ratio:9/16;border-radius:var(--border-radius-md,8px);overflow:hidden;border:1px solid rgba(197,160,89,0.18);box-shadow:0 12px 48px rgba(0,0,0,0.4);background:#000;flex-shrink:0}
+.walkthrough-video iframe{width:100%;height:100%;display:block;border:0}
+.walkthrough-text{color:var(--white);min-width:0}
+.walkthrough-label{font-family:var(--eng);font-size:0.72rem;font-weight:400;letter-spacing:0.3em;color:var(--gold);margin-bottom:22px;text-transform:uppercase}
+.walkthrough-heading{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);font-weight:200;line-height:1.55;letter-spacing:0.08em;color:var(--white);margin-bottom:20px}
+.walkthrough-heading span{display:block;font-size:0.78em;color:var(--gold-dim);margin-top:6px}
+.walkthrough-body{font-family:var(--sans);font-size:clamp(0.85rem,1vw,0.95rem);font-weight:200;letter-spacing:0.05em;line-height:2;color:var(--silver);margin-bottom:28px;max-width:520px}
+.walkthrough-cta{font-family:var(--sans);font-size:0.78rem;font-weight:300;letter-spacing:0.2em;color:var(--gold-dim);padding-top:20px;border-top:1px solid rgba(197,160,89,0.15)}
+
+/* 手機版：影片在上、文字在下置中 */
+@media (max-width:768px){
+  .walkthrough-section{padding:60px clamp(20px,5vw,32px)}
+  .walkthrough-inner{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}
+  .walkthrough-video{width:min(75vw,260px)}
+  .walkthrough-text{text-align:center}
+  .walkthrough-body{text-align:left;max-width:100%}
+  .walkthrough-cta{text-align:center}
+}
