@@ -328,30 +328,3 @@ body{font-family:var(--sans);background:var(--navy);color:var(--pale);overflow-x
   .walkthrough-body{text-align:left;max-width:100%}
   .walkthrough-cta{text-align:center}
 }
-
-/* === 首頁卡片 SOLD 緞帶 === */
-.hero-card{position:relative}
-.hero-card-sold img{filter:grayscale(0.35) brightness(0.75);transition:filter 0.6s var(--ease)}
-.hero-card-sold:hover img{filter:grayscale(0.15) brightness(0.85)}
-.sold-ribbon{
-  position:absolute;
-  top:22px;
-  right:-38px;
-  transform:rotate(45deg);
-  width:150px;
-  text-align:center;
-  padding:7px 0;
-  background:linear-gradient(135deg,#c5a059 0%,#a8853f 100%);
-  color:#0a1429;
-  font-family:var(--eng);
-  font-size:0.72rem;
-  font-weight:600;
-  letter-spacing:0.32em;
-  text-indent:0.32em;
-  box-shadow:0 3px 12px rgba(0,0,0,0.35);
-  z-index:3;
-  pointer-events:none;
-}
-@media (max-width:768px){
-  .sold-ribbon{top:16px;right:-42px;width:140px;font-size:0.65rem;padding:6px 0}
-}
